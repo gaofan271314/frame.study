@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta:vp   快捷键-->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title></title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">改变颜色</button>
+<div id="box"></div>
+<!--<script src="js/jquery-1.7.2.min.js"></script>-->
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script>
+    $(function () {
+        $('#btn').tap(function () {
+            $('#box').css({
+                backgroundColor: 'red'
+            })
+        });
+    });
+
+    /*
+     tap事件: 只能运用在移动端
+     click事件: 既可以适应PC端,也可以适用于移动端
+
+     在移动端,一定要用tap事件, 比click事件快200-300ms
+     */
+</script>
+</body>
+</html>

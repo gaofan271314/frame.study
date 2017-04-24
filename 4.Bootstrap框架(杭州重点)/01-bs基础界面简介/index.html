@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--utf-8:编码的格式  GBK  GB2312-->
+    <meta charset="utf-8">
+    <!--
+        Compatible : 兼容的
+        IE=edge:   告诉ie浏览器 以最新的解析器来解析代码  edge还能是 ie7 8 9...
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+        PC端 -> 随着移动互联网的兴起 -> app
+        PC -> 网站(网页) -> 手机端(wap)   所以w3c设置了这个属性值
+        Viewport:视口  此属性为移动端页面视口设置，当前值表示在移动端页面的宽度为设备的宽度，并且不缩放（缩放级别为1）.
+        960px 内容 被套在一个宽度为980px(绝大多数设备的视口默认尺寸)的容器(视口)中，将视口缩放到设备的真实尺寸中进行展示(换言之当pc端换到移动端时,浏览窗口变成980)
+        user-scalable  是否允许缩放  不允许  让wap App 更加接近原生 因此initial-scale=1
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1>你好，世界！</h1>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

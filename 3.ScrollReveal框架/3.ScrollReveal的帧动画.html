@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScrollReveal的帧动画</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            list-style: none;
+        }
+
+        #box{
+            width: 980px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #box li{
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+            margin: 10px;
+            float: left;
+
+            /*内容上下居中的一种方式*/
+            display: flex;
+            /*主轴的对齐方式*/
+            justify-content: center;
+            /*侧轴的对齐方式*/
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+<ul id="box">
+    <li class="sr">1</li>
+    <li class="sr">2</li>
+    <li class="sr">3</li>
+    <li class="sr">4</li>
+    <li class="sr">5</li>
+    <li class="sr">6</li>
+    <li class="sr">7</li>
+    <li class="sr">8</li>
+    <li class="sr">9</li>
+    <li class="sr">10</li>
+    <li class="sr">11</li>
+    <li class="sr">12</li>
+    <li class="sr">13</li>
+    <li class="sr">14</li>
+    <li class="sr">15</li>
+    <li class="sr">16</li>
+    <li class="sr">17</li>
+    <li class="sr">18</li>
+    <li class="sr">19</li>
+    <li class="sr">20</li>
+    <li class="sr">21</li>
+    <li class="sr">22</li>
+    <li class="sr">23</li>
+    <li class="sr">24</li>
+    <li class="sr">25</li>
+    <li class="sr">26</li>
+    <li class="sr">27</li>
+    <li class="sr">28</li>
+    <li class="sr">29</li>
+    <li class="sr">30</li>
+    <li class="sr">31</li>
+    <li class="sr">32</li>
+    <li class="sr">33</li>
+    <li class="sr">34</li>
+    <li class="sr">35</li>
+    <li class="sr">36</li>
+    <li class="sr">37</li>
+    <li class="sr">38</li>
+    <li class="sr">39</li>
+    <li class="sr">40</li>
+    <li class="sr">41</li>
+    <li class="sr">42</li>
+    <li class="sr">43</li>
+    <li class="sr">44</li>
+    <li class="sr">45</li>
+    <li class="sr">46</li>
+    <li class="sr">47</li>
+    <li class="sr">48</li>
+    <li class="sr">49</li>
+    <li class="sr">50</li>
+    <li class="sr">51</li>
+    <li class="sr">52</li>
+    <li class="sr">53</li>
+    <li class="sr">54</li>
+    <li class="sr">55</li>
+    <li class="sr">56</li>
+    <li class="sr">57</li>
+    <li class="sr">58</li>
+    <li class="sr">59</li>
+    <li class="sr">60</li>
+</ul>
+<script src="js/scrollreveal.js"></script>
+<script>
+    window.onload= function(){
+        window.sr= ScrollReveal();
+        sr.reveal('.sr',{reset:true},50);
+        /*有序动画
+        可以将序列间隔（以毫秒为单位）传递给该reveal()方法，从而使序列动画变得轻而易举。
+         */
+    }
+</script>
+</body>
+</html>

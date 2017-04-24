@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zepto初体验</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+<button id="btn">改变颜色</button>
+<div id="box"></div>
+<!--<script src="js/jquery-1.7.2.min.js"></script>-->
+<script src="js/zepto.min.js"></script>
+<script>
+    $(function () {
+        $('#btn').on('click', function () {
+            $('#box').css({
+                backgroundColor: 'red'
+            })
+        });
+    })
+
+    /*
+    * 1. Zepto 是一个轻量级的针对现代高级浏览器的 JavaScript 库， 它与jquery 有着类似的api。 如果你会用 jquery，那么你也会用 zepto。
+    * 2. jQuery和Zepto.js的区别在哪里？
+
+     （1）jQuery更多是在PC端被应用，因此，考虑了很多低级浏览器的的兼容性问题；而Zepto.js则是直接抛弃了低级浏览器的适配问题，显得很轻盈；
+
+     （2）Zepto.js在移动端被运用的更加广泛；
+
+     （3）jQuery的底层是通过DOM来实现效果的， zepto.js 是用css3 来实现的；
+
+     （4）Zepto.js可以说是阉割版本的jQuery。
+
+      3. 浏览器兼容
+
+     Safari 6+
+     Chrome 30+
+     Firefox 24+
+     iOS 5+ Safari
+     Android 2.3+ Browser
+     Internet Explorer 10+
+
+     4. Zepto官网
+
+     英文版：http:\/\/zeptojs.com\/
+
+     中文版：http:\/\/www.css88.com\/doc\/zeptojs_api\/
+
+
+     5. Zepto设计模块(见官网)
+
+     zepto 为了保持足够的轻量和效率，只保留了默认的最基本的功能，其他的功能，如果有需要，只要再次引入就可以了；
+
+     注意：jQuery的底层是通过DOM来实现效果的， zepto 是用css3 来实现的 对浏览器要求高。*/
+</script>
+
+
+</body>
+</html>

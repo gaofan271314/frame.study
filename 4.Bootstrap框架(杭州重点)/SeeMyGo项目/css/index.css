@@ -1,0 +1,33 @@
+body{
+    padding-top: 50px;
+}
+
+/*主要内容*/
+#content{
+    padding: 20px;
+}
+#content .row .col-md-4{
+    text-align: center;
+    margin-bottom: 30px;   /*注意响应式*/
+}
+#content .row .col-md-4 img{
+    width: 140px;
+}
+#content .row .col-md-4 p{
+    text-align: left;
+    text-indent: 8%;
+}
+
+#tab .tab-content .row .col-md-7{
+    margin-top: 100px;
+}
+
+@media screen and(max-width: 917px){
+    #tab .tab-content .row .col-md-7{
+        margin-top: 10px;
+    }
+}
+
+footer{
+    margin-bottom: 100px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wow初体验</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border:none;
+        }
+
+        .box{
+            width: 800px;
+            margin: 20px auto;
+        }
+
+
+        .box>div{
+            width: 300px;
+            height: 350px;
+            background-color: red;
+        }
+
+        .box>div:nth-child(1){
+            float: left;
+        }
+
+        .box>div:nth-child(2){
+            float: right;
+        }
+    </style>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<div class="box">
+    <div class="wow slideInLeft" data-wow-delay="2s" data-wow-duration="2s" >1</div>
+    <div class="wow slideInRight" data-wow-iteration="4">2</div>
+</div>
+<script src="js/wow.js"></script>
+<script>
+    /*通过Animate.css只给我们省去了一部分效果动画，其他的还需要用js/jQuery来手写，能不能够再化简一些？  wow.js
+    * wow.js框架的核心作用：让页面滚动更有趣
+
+     1.核心作用
+     通过WOW.js，可以在页面逐渐向下滚动的过程中逐渐释放这些动画效果。也就是说：当我们向下滚动页面时，可以省去很多判断条件，让CSS动画逐渐展示出来。
+     2.特点
+     轻量级类库， 不依赖jQuery，超简单的安装和使用，与animate.css配合，只需要短短几行代码就可以实现很多特效。
+     容易定制，我们可以改变动画去设置喜欢的风格、延迟、长度、偏移和迭代等等。
+     3.兼容性考虑
+     因为，WOW.js要和animate.css配合使用，所有其也只兼容支持CSS3 animate属性的浏览器：IE10+、Firefox、Chrome、Opera、Safari。
+     4.WOW.js存在怎样的问题
+     WOW.js实例的动画只能加载一次，如果要重新执行动画必须要进行刷新.
+     但是在实际开发中，更多时候动画是只加载一次，否则会造成视觉错乱
+     那如果要多次重复展现动画该如何处理呢？ ScrollReveal框架
+     */
+    window.onload= function(){
+        new WOW().init();
+    }
+
+    /*WOW.js常用的属性
+     data-wow-delay: 动画开始前延迟
+
+     data-wow-duration: 动画持续时长
+
+     data-wow-iteration: 动画重复次数
+
+     data-wow-offset: 距离浏览器底部到隐藏框顶部的距离（偏移量）*/
+</script>
+
+</body>
+</html>

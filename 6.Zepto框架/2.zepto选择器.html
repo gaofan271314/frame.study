@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zepto选择器</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<button id="btn">改变第二个的颜色</button>
+<div></div>
+<div></div>
+
+<!--<script src="js/jquery-1.7.2.min.js"></script>-->
+<script src="js/zepto.min.js"></script>
+<script src="js/selector.js"></script>
+<script>
+    $(function () {
+        $('#btn').on('click', function () {
+            $('div:eq(1)').css({
+                backgroundColor:'yellow'
+            });
+        });
+    })
+</script>
+
+</body>
+</html>

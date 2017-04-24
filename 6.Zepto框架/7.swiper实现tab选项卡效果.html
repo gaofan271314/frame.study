@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>swiper实现tab选项卡效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+            list-style: none;
+            touch-action: none;
+        }
+
+        .box{
+            position: relative;
+        }
+        .head{
+            width: 100%;
+            height: 40px;
+            background: #ccc;
+        }
+        .head li{
+            width: 50%;
+            height: 40px;
+            float: left;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .head .current{
+            color: red;
+        }
+        .box>span{
+            width: 50%;
+            height: 3px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 37px;
+        }
+
+        .content{
+            width: 200%;
+            overflow: hidden;
+        }
+        .content>div{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .content>div ul li{
+            line-height: 35px;
+            border-bottom: 1px solid #000;
+        }
+        .content>div a{
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <!--头部区域-->
+    <div class="head">
+        <ul>
+            <li class="current">新闻</li>
+            <li>科技</li>
+        </ul>
+    </div>
+    <!--线条-->
+    <span class="line"></span>
+    <!--内容区域-->
+    <div class="content">
+        <div class="list1">
+            <ul>
+                <li>新闻内容新闻内容新闻内容</li>
+                <li>新闻内容新闻内容新闻内容</li>
+                <li>新闻内容新闻内容新闻内容</li>
+                <li>新闻内容新闻内容新闻内容</li>
+                <li>新闻内容新闻内容新闻内容</li>
+            </ul>
+            <a href="#">查看更多...</a>
+        </div>
+        <div class="list2">
+            <ul>
+                <li>科技内容科技内容科技内容</li>
+                <li>科技内容科技内容科技内容</li>
+                <li>科技内容科技内容科技内容</li>
+                <li>科技内容科技内容科技内容</li>
+                <li>科技内容科技内容科技内容</li>
+            </ul>
+            <a href="#">查看更多...</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script>
+    $(function(){
+        //监听tap事件
+        $('.head li').tap(function(){
+            var index= $(this).index();
+//            $(this).addClass('current').siblings().removeClass('current');
+//            $('.line').css({
+//                transform: 'translateX(' +index*100 + '%)',
+//                transition: 'all 0.25s linear'
+//            })
+//            $('.content').css({
+//                transform: 'translateX(' + -index * 50 +'%)',
+//                transition: 'all 0.25s linear'
+//            })
+            dealWithSwipe(index);
+        })
+
+
+        /*gf:  注意处理问题的思想  尽量统一化,抽取代码后再赋值  简化代码 */
+
+
+        //监听swiper事件
+        $('.content').swipeLeft(function(){
+            dealWithSwipe(1);
+        })
+        $('.content').swipeRight(function(){
+            dealWithSwipe(0);
+        })
+
+        /*统一处理左右滑动   抽取函数
+        * @param index 索引
+        * */
+        function dealWithSwipe(index) {
+            // 1.2 改变选中样式
+            $('.head li').eq(index).addClass('current').siblings().removeClass('current');
+
+            // 1.3 处理线条的样式
+            $('.line').css({
+                transform: 'translateX(' + index * 100 +'%)',
+                transition: 'all 0.25s linear'
+            });
+
+            // 1.4 处理列表
+            $('.content').css({
+                transform: 'translateX(' + -index * 50 +'%)',
+                transition: 'all 0.25s linear'
+            })
+        }
+
+    })
+</script>
+</body>
+</html>

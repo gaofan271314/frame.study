@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no">
+    <title>zepto的swiper事件</title>
+    <style>
+        *{
+            /*清除默认手势   移动端用zepto操作时必须禁止触发默认手势才能使用*/
+            touch-action: none;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            position: absolute;
+            left: 50px;
+            top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fx.js"></script>
+    <script src="js/touch.js"></script>
+    <script>
+        $(function(){
+            $('.box').swipe(function(){
+                console.log("滑动了");
+            })
+        })
+
+        /*
+         $('.box').swipeLeft(function () {
+         console.log('向左滑动了!!!!');
+         });
+
+         $('.box').swipeRight(function () {
+         console.log('向右滑动了!!!!');
+         });
+
+         $('.box').swipeUp(function () {
+         console.log('向上滑动了!!!!');
+         });
+
+         $('.box').swipeDown(function () {
+         console.log('向下滑动了!!!!');
+         });
+         */
+
+        $('.box').swipeRight(function(){
+            $(this).animate({
+                left: '200px'
+            })
+        })
+
+    </script>
+</body>
+</html>

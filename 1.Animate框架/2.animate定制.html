@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate定制</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px auto;
+        }
+
+        .animated {
+            -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body>
+<div class="animated slideInDown"></div>
+<!--需要修改的话 ctrl animated 查找源代码 拷贝出来修改覆盖-->
+</body>
+</html>
